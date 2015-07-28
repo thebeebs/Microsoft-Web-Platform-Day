@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>EntityFramework.Relational.Design</id>
+    <version>7.0.0-beta5</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Shared Design-time Entity Framework components for relational data stores.</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Microsoft.AspNet.Razor" version="4.0.0-beta5" />
+        <dependency id="Microsoft.CodeAnalysis.CSharp" version="1.0.0-rc3" />
+        <dependency id="EntityFramework.Relational" version="7.0.0-beta5" />
+      </group>
+      <group targetFramework="DNX4.5.1">
+        <dependency id="Microsoft.AspNet.Razor" version="4.0.0-beta5" />
+        <dependency id="Microsoft.CodeAnalysis.CSharp" version="1.0.0-rc3" />
+        <dependency id="EntityFramework.Relational" version="7.0.0-beta5" />
+        <dependency id="Microsoft.Framework.Runtime.Roslyn" version="1.0.0-beta5" />
+      </group>
+      <group targetFramework="DNXCore5.0">
+        <dependency id="Microsoft.AspNet.Razor" version="4.0.0-beta5" />
+        <dependency id="Microsoft.CodeAnalysis.CSharp" version="1.0.0-rc3" />
+        <dependency id="EntityFramework.Relational" version="7.0.0-beta5" />
+        <dependency id="Microsoft.Framework.Runtime.Roslyn" version="1.0.0-beta5" />
+      </group>
+      <group targetFramework=".NETCore5.0">
+        <dependency id="Microsoft.AspNet.Razor" version="4.0.0-beta5" />
+        <dependency id="Microsoft.CodeAnalysis.CSharp" version="1.0.0-rc3" />
+        <dependency id="EntityFramework.Relational" version="7.0.0-beta5" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="mscorlib" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.IO" targetFramework="DNX4.5.1" />
+      <frameworkAssembly assemblyName="System.Text.Encoding" targetFramework="DNX4.5.1" />
+      <frameworkAssembly assemblyName="System.Threading.Tasks" targetFramework="DNX4.5.1" />
+      <frameworkAssembly assemblyName="mscorlib" targetFramework="DNX4.5.1" />
+      <frameworkAssembly assemblyName="System" targetFramework="DNX4.5.1" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="DNX4.5.1" />
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework="DNX4.5.1" />
+    </frameworkAssemblies>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <projectUrl>http://www.asp.net/</projectUrl>
+  </metadata>
+</package>
