@@ -10,7 +10,7 @@
 },
   ```
 
-  > *Note: Make sure you remember the comma at the end of the previous line.*
+  > *Note: Make sure you remember the comma at the end of the previous line and then save the file.*
 
 3. In `Startup.cs`, modify the `ConfigureServices()` function to include `services.AddMvc()`:
 
