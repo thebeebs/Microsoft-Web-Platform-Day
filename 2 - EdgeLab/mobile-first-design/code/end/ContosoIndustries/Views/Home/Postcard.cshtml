@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Contoso Movies";
+}
+
+<div id="primaryContent">
+
+    <h2>Send a movie postcard to your friends</h2>
+
+    <div class="postcard">
+
+        <div class="postcard-section section1"><img class="postcard-image" src="~/Content/images/postcard.png" /></div>
+        <div class="postcard-section section2">
+            <div>
+                <div class="postcard-message">Watch Sintel!</div>
+                <div>Use your mouse or finger to sign below</div>
+                <iframe src="~/Sign.html" height="250" min-width="300" scrolling="no"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <table id="sendPostcard-section">
+        <tr>
+            <td> <span>Email</span></td>
+            <td>
+                <input class="emailInput" />
+            </td>
+            <td> <button>Send</button></td>
+        </tr>
+    </table>
+
+</div>
+
+<ul data-role="listview" class="navigationList" data-inset="true">
+    <li data-role="list-divider">Navigation</li>
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("About", "About", "Home")</li>
+    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+</ul>
+
+<style>
+    .postcard-image {
+        margin: 5px;
+        width: 98%;
+    }
+
+    .postcard-section {
+        border: 1px solid black;
+        float: left;
+        min-width: 300px;
+        max-width: 650px;
+        width: 100%;
+    }
+
+        .postcard-section .section2 {
+            height: 353px;
+        }
+
+
+    #sendPostcard-section {
+        margin-top: 10px;
+        width: 81%;
+    }
+
+
+    .postcard-message {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+</style>

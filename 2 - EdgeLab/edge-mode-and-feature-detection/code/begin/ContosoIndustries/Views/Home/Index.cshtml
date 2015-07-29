@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Contoso Movies";
+}
+
+<style>
+    .fadeIn {
+        animation: fadeIn 3s forwards;
+    }
+
+    @@keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #hidden-message {
+        opacity: 0;
+        font-size: 26px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: Garamond;
+    }
+
+    #movietitle {
+        background-color: black;
+        text-align: center;
+        background-color: black;
+        height: 180px;
+    }
+</style>
+
+<div id="main">
+    <div id="primaryContent">
+        <p id="hidden-message">
+            Coming soon!
+        </p>
+        <div>
+            <div id="movietitle">
+                <img id="sintelLogo" src="~/Content/images/Sintel_logo.png" />
+                <img id="sintelTitle" src="~/Content/images/Sintel.png" />
+            </div>
+        </div>
+
+        <div id="myElement">Loading the player...</div>
+
+        <script type="text/javascript">
+            jwplayer("myElement").setup({
+                file: "http://wams.edgesuite.net/media/SintelTrailer_MP4_from_WAME/sintel_trailer-1080p_3400.mp4",
+                width: "100%",
+                aspectratio: "16:9",
+                primary: "flash"
+            });
+        </script>
+    </div>
+
+    <ul data-role="listview" style="margin:10px 0 10px 0;" data-inset="true">
+        <li data-role="list-divider">Navigation</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Postcard", "Postcard", "Home")</li>
+    </ul>
+</div>
+
+<script>
+    var comingSoonMessage = document.getElementById("hidden-message");
+
+    function isValidBrowser() {
+        var myNav = navigator.userAgent.toLowerCase();
+        var version;
+
+        if (myNav.indexOf('msie') != -1) {
+            version = parseInt(myNav.split('msie')[1])
+            return version > 8;
+        }
+
+        return true;
+    }
+
+    if (isValidBrowser()) {
+        comingSoonMessage.className = "fadeIn";
+    } else {
+        comingSoonMessage.className = "";
+    }
+</script>
+
+
+<script>
+    window.attachEvent("load", function () {
+        setTimeout(function () { jwplayer().play(true); }, 200);
+    });
+</script>

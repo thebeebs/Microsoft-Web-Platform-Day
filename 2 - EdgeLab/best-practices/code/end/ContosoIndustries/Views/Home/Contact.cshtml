@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Contoso Movies";
+}
+
+<style>
+    .contact {
+        padding: 5px 10px 15px 0px;
+        font-family: Georgia;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .highqualityimage {
+        background: url("/content/images/sintel_logo.png") no-repeat;
+        height: 140px;
+    }
+</style>
+
+<div id="primaryContent">
+    <h2>Contact</h2>
+    <div class="highqualityimage"></div>
+    <div class="contact">If you want to be a sponsor, or have further inquiries contact <a href="mailto:ton@blender.org">Ton Roosendaal</a>. You can also read further about sponsoring Sintel <a href="https://durian.blender.org/sponsors/">here</a>.</div>
+    <div class="contact">You can call us at 1-800-555-5555</div>
+</div>
+
+<ul data-role="listview" class="navigationList" data-inset="true">
+    <li data-role="list-divider">Navigation</li>
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("About", "About", "Home")</li>
+    <li>@Html.ActionLink("Postcard", "Postcard", "Home")</li>
+</ul>

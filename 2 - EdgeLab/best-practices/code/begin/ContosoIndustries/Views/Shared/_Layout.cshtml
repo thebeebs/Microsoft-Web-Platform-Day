@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <meta name="viewport" content="width=device-width" />
+
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        @Styles.Render("~/Content/mobileCss", "~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/flashplayer")
+    </head>
+    <body>
+        <div data-role="page" data-theme="b">
+            <header data-role="header">
+                @if (IsSectionDefined("Header"))
+                {
+                    @RenderSection("Header")
+                }
+                else
+                {
+                    <div class="header-container">
+                        <img class="logo" src="~/Content/images/movieIcon.png" />
+                        <div class="title">@ViewBag.Title</div>
+                    </div>
+                }
+            </header>
+            <div id="mainContent" style="margin:10px;" classdata-role="content">
+                @RenderBody()
+            </div>
+
+            <div id="html5Legend" style="width: 100%;">
+            </div>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jquerymobile")
+        @Scripts.Render("~/bundles/app")
+        @RenderSection("scripts", required: false)
+
+        <script>
+            window.addEventListener("mobileinit", function () {
+                $.mobile.ajaxEnabled = false;
+            });
+        </script>
+
+    </body>
+</html>

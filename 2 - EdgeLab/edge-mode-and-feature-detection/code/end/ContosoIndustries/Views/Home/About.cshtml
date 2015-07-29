@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Contoso Movies";
+}
+<style>
+    #sintelLogo {
+        margin-left: 30px;
+    }
+
+    .aboutFilm {
+        padding: 5px 10px 5px 10px;
+        font-family: Georgia;
+        font-size: 12px;
+        margin: 0px 20px 0px 20px;
+        text-align: justify;
+    }
+
+    .scriptroll {
+        margin: 0px 20px 0px 20px;
+        color: #403e3e;
+        font-family: Georgia;
+        font-size: 10px;
+        padding: 20px 0px 20px 0px;
+    }
+</style>
+<div id="primaryContent">
+    <div>
+        <h2>About</h2>
+    </div>
+    <img id="sintelLogo" src="~/Content/images/Sintel_logo.svg" />
+    <div>
+        <p class="aboutFilm">
+            “Sintel” is an independently produced short film, initiated by the Blender Foundation as a means to further improve andvalidate the free/open source 3D creation suite Blender. With initial funding provided by 1000s of donations via the internet community, it has again proven to be a viable development model for both open 3D technology as for independent animation film.
+        </p><p class="aboutFilm">
+            This 15 minute film has been realized in the studio of the Amsterdam Blender Institute, by an international team of artists and developers. In addition to that, several crucial technical and creative targets have been realized online, by developers and artists and teams all over the world.
+        </p>
+        <p class="aboutFilm">
+            “Sintel” commenced in May 2009, with producer Ton Roosendaal establishing a core team consisting of Colin Levy (director), David Revoy (concept art), Martin Lodewijk (story) and Jan Morgenstern (composer). In August script writer Esther Wouda was approached as a consultant, which resulted in her taking the responsibility for the entire screenplay. Esther then worked in close cooperation with Colin, David and Ton to deliver the final script early November. Meanwhile, Colin and David realized the first storyboards.
+        </p>
+        <p class="aboutFilm">
+            Based on a public call for artists – with over 150 respondents – the Durian artist team got established in July 2009. They first met in a pre-production week in Amsterdam in August, and all decided to join the project per October 1st. With the final movie budget still unknown, the target then still was to finish the film within 7 months, with a team of 6 artists and 2 developers. At that time the team still had the hopes to be able to realize the script in a 6-8 minute film.
+        </p>
+        <p class="aboutFilm">
+            In november, the Netherlands Film Fund approved on a substantial subsidy for Sintel, enough to extend the project to 10 months, with possible 1 or 2 extra artist seats in the final months. It was also by this time that breakdowns and animatic edits showed that the script had to be revised to become more compact, with a story structure using a flashback.
+        </p>
+        <p class="aboutFilm">
+            In the months after, Colin’s work on the Director’s Layout – 3D animatic shots – and final designs on the grand finale gradually made the movie longer, from 9 minutes in november, to almost 12 in May. Proper story telling, to absorb an audience with convincing characters and action just takes time!
+        </p>
+        <p class="aboutFilm">
+            With the highly anticipated extra funding from the Amsterdam Cinegrid – also funding a 4k resolution version – Ton finally could extend the team with 5 artists and a developer in March 2010. With 14 people the film then was completed for a first screening on July 18th in cinema Studio K in Amsterdam.
+            Three artists then stayed in Amsterdam working on final shot edits, lighting design, compositing, and on the impressive 2 minute film credits. The movie ended up with a total duration of 14m:48s, 888 seconds!
+        </p>
+        <p class="aboutFilm">
+            Sintel will premiere on September 27th 2010, in Utrecht on the Netherlands Film Festival.
+        </p>
+        <p class="aboutFilm">
+            The movie itself, and all of the work of the Durian team in the past 18 months will be released under the Creative Commons Attribution license, free for everyone to distribute, learn from or re-use. The 4-disc DVD set will provide all data to be able to recreate and rerender the film in its entirety.
+        </p>
+        <div class="scriptroll">© copyright Blender Foundation | durian.blender.org</div>
+    </div>
+</div>
+<ul data-role="listview" class="navigationList" data-inset="true">
+    <li data-role="list-divider">Navigation</li>
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    <li>@Html.ActionLink("Postcard", "Postcard", "Home")</li>
+</ul>

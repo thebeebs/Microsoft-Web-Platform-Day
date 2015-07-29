@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign postcard</title>
+    <script type="text/javascript" src="Scripts/hand-1.3.8.js"></script>
+</head>
+<body style="margin:0">
+    <canvas id="drawSurface" width="400px" height="250px" style="border: 1px dashed black;"></canvas>
+    <script>
+        var canvas = document.getElementById("drawSurface");
+        var context = canvas.getContext("2d");
+        context.fillStyle = "rgba(0, 0, 0, 0.5)";
+
+        canvas.addEventListener("pointermove", paint, false);
+
+        function paint(event) {
+            context.fillRect(event.clientX, event.clientY, 10, 10);
+        }
+    </script>
+    <style>
+        #drawSurface {
+            touch-action: none; /* Disable touch behaviors, like pan and zoom */
+        }
+    </style>
+</body>
+</html>
